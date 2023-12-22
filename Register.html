@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form id="registrationForm" class="form">
+        <h2>Register</h2>
+        <label for="newUsername">New Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+        <br>
+  
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+        <br>
+        
+        <label for="userType">User Type:</label>
+        <select id="userType" name="userType">
+          <option value="regular">Regular</option>
+          <option value="premium">Premium</option>
+          <option value="restricted">Restricted</option>
+        </select>
+        <br>
+  
+        <button type="submit">Register</button>
+      </form>
+      <script src="script.js"></script>
+</body>
+</html>

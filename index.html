@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager</title>
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+
+    <form id="taskForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" required>
+
+           <label for="dueTime">Due Time:</label>
+        <input type="time" id="dueTime">
+
+        
+
+        <label for="category">Category:</label>
+        <select id="category" required>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+        </select>
+
+        <button type="button" onclick="addTask()">Add Task</button>
+        
+    </form>
+
+    <div id="filterOptions">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter" onchange="filterTasksByCategory()">
+            <option value="all">All</option>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="shopping">Shopping</option>
+        </select>
+
+        <label for="statusFilter">Filter by Status:</label>
+        <select id="statusFilter" onchange="filterTasksByStatus()">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+        </select>
+    </div>
+
+    <div id="taskList"></div>
+    <br>
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
